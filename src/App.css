@@ -15,18 +15,28 @@
   margin: 0 auto;
 }
 
+.image-slider {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
 .displayed-image {
   display: block;
   object-fit: cover;
   object-position: center center;
   width: 100%;
   height: 100%;
-  border: 2px solid blue;
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: translate 200ms ease-in-out;
 }
 
 .prevBtn,
 .nextBtn {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.15);
   position: absolute;
   height: 100%;
   width: 10%;
@@ -35,6 +45,8 @@
   justify-content: center;
   align-items: center;
   font-size: 4rem;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out;
 }
 
 .prevBtn {
@@ -43,4 +55,33 @@
 
 .nextBtn {
   right: 0;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.indexBtn-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  bottom: 0.25rem;
+  gap: 0.2rem;
+}
+
+.indexBtn {
+  all: unset;
+  transition: scale 200ms ease-in-out;
+}
+
+.indexBtn:hover {
+  scale: 1.2;
+}
+
+.circle1 {
+  scale: 1.2;
 }
