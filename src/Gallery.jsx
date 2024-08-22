@@ -3,19 +3,17 @@ import { useState } from "react";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { FaRegDotCircle, FaDotCircle } from "react-icons/fa";
 
-const Gallery = () => {
+const Gallery = ({ image, thumbnailsOrDot }) => {
   const [imageIndex, setImageIndex] = useState(0);
-
-  const Image = ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"];
 
   const prevImg = () => {
     imageIndex === 0
-      ? setImageIndex(Image.length - 1)
+      ? setImageIndex(image.length - 1)
       : setImageIndex(imageIndex - 1);
   };
 
   const nextImg = () => {
-    imageIndex === Image.length - 1
+    imageIndex === image.length - 1
       ? setImageIndex(0)
       : setImageIndex(imageIndex + 1);
   };
@@ -23,7 +21,7 @@ const Gallery = () => {
     <>
       <div className="image-container">
         <div className="image-slider">
-          {Image.map((item, index) => {
+          {image.map((item, index) => {
             return (
               <img
                 key={index}
@@ -41,12 +39,30 @@ const Gallery = () => {
         <button onClick={nextImg} className="nextBtn">
           <AiFillCaretRight style={{ color: "white" }} />
         </button>
-        <div className="indexBtn-container">
-          {Image.map((item, index) => {
-            return (
+        <div
+          className={
+            thumbnailsOrDot ? "thumbnail-wrapper" : "index-btn-wrapper"
+          }
+        >
+          {image.map((item, index) => {
+            return thumbnailsOrDot ? (
+              <div
+                key={index}
+                className="thumbnail-container"
+                onClick={() => setImageIndex(index)}
+              >
+                <img
+                  className={
+                    index === imageIndex ? "thumbnail-active" : "thumbnail"
+                  }
+                  src={item}
+                  alt=""
+                />
+              </div>
+            ) : (
               <button
                 key={index}
-                className="indexBtn"
+                className="index-btn"
                 onClick={() => setImageIndex(index)}
               >
                 {index === imageIndex ? (
