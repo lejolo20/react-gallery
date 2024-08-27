@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Gallery from "./Gallery";
 import img1 from "/01.webp";
@@ -8,10 +7,18 @@ import img4 from "/04.webp";
 import img5 from "/05.webp";
 
 function App() {
-  const images = [img1, img2, img3, img4, img5, img1, img2, img3, img4, img5];
+  const images = [img1, img2, img3, img4, img5, img3, img2, img1, img4, img5];
   return (
     <>
-      <Gallery image={images} thumbnailsOrDot={true} />
+      <Gallery
+        images={images}
+        thumbnailsOrDot={true}
+        autoplayInterval={2000}
+        isAutoplay={false}
+        thumbnailCount={5}
+        showAutoplayButton={true}
+        showPrevNextButton={true}
+      />
     </>
   );
 }
