@@ -13,8 +13,8 @@ function App() {
       <Gallery
         images={images}
         thumbnailsOrDot={true}
-        autoplayInterval={2000}
-        isAutoplay={false}
+        autoplayInterval={3000}
+        isAutoplay={true}
         thumbnailCount={5}
         showAutoplayButton={true}
         showPrevNextButton={true}
