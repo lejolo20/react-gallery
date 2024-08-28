@@ -1,0 +1,50 @@
+{
+  "name": "react-gallery-infinite-carousel",
+  "version": "1.0.1",
+  "description": "A React component for an infinite gallery with autoplay and thumbnails/dots",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "gallery",
+    "infinite",
+    "carousel",
+    "slider",
+    "autoplay",
+    "thumbnails",
+    "dots",
+    "react-gallery-infinite-carousel",
+    "react-infinite-carousel",
+    "react-gallery",
+    "react-carousel",
+    "react-slider",
+    "react-autoplay",
+    "react-thumbnails",
+    "react-dots"
+  ],
+  "author": "Leonardo Lopez Lejodev",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-icons": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.56.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
