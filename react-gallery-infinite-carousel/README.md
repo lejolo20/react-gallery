@@ -13,7 +13,7 @@ npm install react-infinite-gallery
 ```ruby
 
 import React from 'react';
-import Gallery from 'react-infinite-gallery';
+import Gallery from 'react-gallery-infinite-carousel';
 
 const App = () => {
 const images = [
@@ -29,7 +29,7 @@ return (
     thumbnailsOrDot={true}
     autoplayInterval={3000}
     isAutoplay={true}
-    thumbnailCount={5}
+    thumbnailCount={3}
     showAutoplayButton={true}
     showPrevNextButton={true}
 />
@@ -45,7 +45,7 @@ export default App;
 - `thumbnailsOrDot` (boolean, optional): Whether to display thumbnails or dots for navigation. Default is `true`.
 - `autoplayInterval` (number, optional): The interval in milliseconds between autoplay transitions. Default is 3000.
 - `isAutoplay` (boolean, optional): Whether autoplay should be on by default. Default is `true`.
-- `thumbnailCount` (number): number of image to show in the carousel of thumbnails.
+- `thumbnailCount` (number): number of image to show in the carousel of thumbnails. Default is 3.
 - `showAutoplayButton` (boolean, optional): to show the play/stop button.
 - `showPrevNextButton` (boolean, optional): to show the previous/next button.
 
